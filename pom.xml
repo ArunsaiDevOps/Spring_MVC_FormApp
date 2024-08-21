@@ -7,6 +7,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringMVCFormApp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<sonar.host.url>http://192.168.1.107:9000/</sonar.host.url>
+		<sonar.login>ba3ef5628ee07aad4a045710359e8231ebec1a5b</sonar.login>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -35,6 +39,22 @@
 			<version>2.3.1</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Arunsai Releases Nexus Repository</name>
+	      <url>http://192.168.1.102:8081/repository/Spring_FormApp_Release/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Arunsai Snapshot Nexus Repository </name>
+	      <url>http://192.168.1.102:8081/repository/Spring_FormAPP_Snapshot/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+
 	<build>
 		<finalName>SpringFormApp</finalName>
 	</build>
